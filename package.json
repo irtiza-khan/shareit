@@ -1,0 +1,30 @@
+{
+    "name": "y",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server",
+        "dev": "nodemon server"
+    },
+    "author": "irtiza",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-flash": "0.0.2",
+        "express-session": "^1.17.1",
+        "googleapis": "^61.0.0",
+        "mongoose": "^5.10.9",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.4.14",
+        "uuid": "^8.3.1"
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "nodemon": "^2.0.5"
+    }
+}
