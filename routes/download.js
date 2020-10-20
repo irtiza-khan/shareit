@@ -9,6 +9,7 @@ router.get('/:id', async(req, res) => {
             req.flash('error', 'Link Has Been Expired ');
             return res.render('download');
         }
+
         const filePath = `${__dirname}/../${file.path}`;
         res.download(filePath);
     } catch (err) {

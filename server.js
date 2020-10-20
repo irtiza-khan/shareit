@@ -8,12 +8,21 @@ const fileRoutes = require('./routes/api')
 const path = require('path')
 const session = require('express-session')
 const flash = require('express-flash');
+const cors = require('cors');
+
+
+
 const PORT = process.env.PORT || 5000;
 
 
 //Database connection function 
 connectDB();
 app.use(morgan('dev'));
+
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENTS.split(',')
+        //[http://localhost:3000,https://localhost:5050]
+}
 
 
 app.use(session({
@@ -25,6 +34,7 @@ app.use(session({
 
 app.use(flash());
 app.use(express.json());
+app.use(cors(corsOptions)); //cors middelware
 //Template engine
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
